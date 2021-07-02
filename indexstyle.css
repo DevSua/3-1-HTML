@@ -1,0 +1,13 @@
+*{
+	width: auto;
+	text-align:center;	
+}
+#header{
+	font-size : 30px;
+	color: pink;
+}
+#footer{
+	text-align:center;	
+	font-size : 30px;
+	color: pink;
+}

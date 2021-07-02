@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=width-device, initial-scale=1">
+<script type="text/javascript">
+		var username;
+		var userid;
+		var userpwd;
+		function init(){
+			username = document.getElementById('username').focus();
+			username.focus();
+		}
+		function check(){
+			username= document.getElementById('username');
+			userid= document.getElementById('userid');
+			userpwd=document.getElementById('userpwd')
+			if(username.value==""){
+				alert("이름을 입력하세요.");
+				username.focus();
+			}else if(userid.value==""){
+				alert("id를 입력하세요");
+				userid.focus();
+			}
+			else if(userpwd.value==""){
+				alert("비밀번호를 입력하세요");
+				userpwd.focus();
+			}
+			else{
+				var text="이름 " + username.value +"님 환영합니다."
+				alert(text);
+				window.close();
+			}
+			}
+	</script>
+<title>로그인</title>
+<style>
+*{ 
+	margin: 10; 
+	padding: 10; 
+}
+h1{
+	color:#4374D9;
+	margin-bottom: 50px;
+	margin-left:20px;
+}
+#login{
+	background-color: #4374D9;
+	text-align: center;
+	padding: 10px;			
+	margin-top: 10px;
+}
+#login > a{
+	color: white;
+	text-decoration: none;
+}
+#userid{
+	border:1px solid lightgray;
+	padding: 10px;
+}
+#userpwd{
+	border:1px solid lightgray;
+	padding: 10px;
+}
+#username{
+	border:1px solid lightgray;
+	padding: 10px;
+}
+
+</style>
+
+</head>
+<body>
+<h1> WEBPROGRAMMING </h1>
+<form>
+<table cellspacing="10px">
+<tr>
+<td>
+<input type="text" size="40" name="username" id="username" placeholder="이름">
+</td>
+</tr>
+<tr>
+<td>
+<input type="text" size="40" name="userid" id="userid" placeholder="아이디">
+</td>
+</tr>
+<tr>
+<td><input type="password" maxlength="15" name="userpwd" id="userpwd" size="40" placeholder="비밀번호">
+</td>
+</tr>
+<tr>
+<td id="login"><a href="javascript:check()">로그인
+</td>	
+</tr>
+</table>
+</form>
+</section>
+</body>
+</html>
